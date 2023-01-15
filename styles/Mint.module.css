@@ -1,0 +1,70 @@
+
+ .container {
+  padding: 24px;
+  
+ }
+
+ .container2 {
+  
+  height: 24px;
+  width: 24px;
+  align-items: center;
+  object-position: center;
+  text-align: center;
+ }
+
+
+
+ .info {
+  
+  flex-direction: row;
+  align-items: center;
+  
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 240px;
+ }
+
+ div.imagebox {
+    margin: 5px;
+    border: 5px solid rgb(4, 241, 75);
+    float: left;
+    height: 650px;
+    width: 220px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .h2 { 
+    text-size-adjust: large;
+  }
+
+  .eyelogo {
+    border-radius: 100%;
+    height: 150px;
+   }
+
+   .mintbutton {
+    
+
+      background-color: #4CAF50;
+      padding: 15px 32px;
+      border-radius: 12px;
+      border: 2px solid rgb(238, 3, 238);
+      font-size: large;
+      height: 25px;
+      width: 40px;
+      
+    
+   }
+
+   .web3button {
+    padding: auto;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 24px;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 240px;
+   }

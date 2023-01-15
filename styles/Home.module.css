@@ -117,3 +117,26 @@
 .logo img {
   filter: invert(1);
 }
+
+
+ .containerHashLips {
+  padding: 100%;
+ }
+
+ .eyelogo {
+  border-radius: 100%;
+  height: 150px;
+ }
+
+ .infoHashLips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  text-align: center;
+ }
+
+ .bottomlogo {
+  border-radius: 100%;
+  height: 200px;
+ }

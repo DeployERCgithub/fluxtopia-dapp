@@ -17,8 +17,65 @@ a {
 
 html {
   color-scheme: dark;
-}
+  }
 body {
-  color: #e7e8e8;
-  background: #0f1318;
+  color: #f5f8f6;
+  text-align: center;
+  word-wrap: break-word;
+
 }
+div.gallery {
+  margin: 5px;
+  border-radius: 12px;
+  border : 4px solid rgb(184, 5, 190);
+  float: left;
+  height: 650px;
+  width: 220px;
+  padding: 5px;
+  
+}
+
+.buybutton {
+  
+  background-color: #4CAF50;
+  padding: 15px 32px;
+  border-radius: 12px;
+  border: 2px solid rgb(238, 3, 238);
+  font-size: large;
+  
+}
+
+.buybutton:hover {
+  background-color: #c709e0;
+  padding: 15px 32px;
+  border-radius: 12px;
+  border: 2px solid rgb(238, 3, 238);
+}
+
+.buybutton:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.buybutton:active {
+  background-color: #05f30d;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+h1 {
+  color: #05c244;
+  text: 2px solid rgb(238, 3, 238);
+}
+
+div.buybuttongrid {
+  
+  margin: 5px;
+  border : 3px solid rgb(3, 197, 61);
+  float: bottom;
+  border-radius: 12px;
+  padding: 5px;
+  
+}
+
