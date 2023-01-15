@@ -38,7 +38,7 @@ const Mint: NextPage = () => {
         onChange={(e) => setAmount(() => e.target.value)} 
         disabled={mintClicked}
         autoComplete="off"
-        style={{ width: '100px', height: '30px' }}/>
+        style={{ width: '130px', height: '30px' }}/>
         <p>Total Price: {total} ETH</p>
               <div >
                 <Web3Button  className="buybutton"
