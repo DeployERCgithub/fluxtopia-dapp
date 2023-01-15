@@ -29,11 +29,7 @@ const Header: React.FC = () => {
                 Your Nfts
                 </a>
             </Link>
-            <Link legacyBehavior href={"/note"}>
-            <a className={router.pathname == "/note" ? styles.active : styles.link}>
-                Note
-                </a>
-            </Link>
+            
         </div>
         <ConnectWallet colorMode="light" accentColor="#05f30d"/>
     </div>
