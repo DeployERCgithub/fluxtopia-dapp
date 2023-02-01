@@ -19,6 +19,11 @@ const Header: React.FC = () => {
                 Mint
                 </a>
             </Link>
+            <Link legacyBehavior href={"/staking"}>
+            <a className={router.pathname == "/staking" ? styles.active : styles.link}>
+                Staking
+                </a>
+            </Link>
             <Link legacyBehavior href={"/listednfts"}>
             <a className={router.pathname == "/listednfts" ? styles.active : styles.link}>
                 Listed NFTs
