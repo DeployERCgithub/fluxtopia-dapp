@@ -34,7 +34,7 @@ const MyNfts: NextPage = () => {
       <main className={styles.main}>
       <img className={styles.eyelogo} src="./FluxBanner.jpg" alt="toplogo"/>
         
-        <h1>Fluxtopias Martketplace DAPP</h1>
+        <h1>Fluxtopias DAPP</h1>
         <Header />
         <h2>Your NFTs</h2>
         <p>List of NFTs you own that can be listed on the marketplace.</p>

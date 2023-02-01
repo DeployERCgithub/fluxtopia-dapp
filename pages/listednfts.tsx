@@ -23,7 +23,7 @@ const ListedNfts: NextPage = () => {
       <main className={styles.main}>
         <img className={styles.eyelogo} src="./FluxBanner.jpg" alt="toplogo"/>
       
-        <h1>Fluxtopias Martketplace DAPP</h1>
+        <h1>Fluxtopias Marketplace DAPP</h1>
         <Header />
         
                 <h2>NFTs Listed for Sale</h2>

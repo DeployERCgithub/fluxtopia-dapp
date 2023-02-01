@@ -22,7 +22,7 @@ const Mint: NextPage = () => {
     <div className={styles.container}>
       
         <img className={styles.eyelogo} src="./FluxBanner.jpg" alt="toplogo"/>
-        <h1>Fluxtopias Martketplace DAPP</h1>
+        <h1>Fluxtopias Minting DAPP</h1>
         <Header />
         <section className={styles.info}>
         <h2>Welcome to Test Mint DAPP.</h2>

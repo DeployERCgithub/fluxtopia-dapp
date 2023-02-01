@@ -65,7 +65,7 @@ const { mutateAsync: claimRewards } = useContractWrite(
     <div className={styles.container}>
       <main className={styles.main}>
         <img className={styles.eyelogo} src="./FluxBanner.jpg" alt="toplogo"/>
-        <h1>Fluxtopias Martketplace DAPP</h1>
+        <h1>Staking DAPP</h1>
         <Header />
         <p>Welcome to Fluxtopias STAKING DAPP.</p>
         <p>Make sure to connect your wallet to be able to interact with the DAPP.</p>
