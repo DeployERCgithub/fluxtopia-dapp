@@ -7,7 +7,7 @@ import { contractAddress, contractAbi } from "../TagiABI";
 
 
 const YourTagi: NextPage = () => {
-  const { contract } = useContract(contractAddress); //Add The Contract you want to look up of Owner
+  const { contract } = useContract(contractAddress, contractAbi); //Add The Contract you want to look up of Owner
   /** @type {import("@thirdweb-dev/react").Contract} */
  
   const address = useAddress();
@@ -26,7 +26,7 @@ const YourTagi: NextPage = () => {
         
         <h1>Fluxtopias DAPP</h1>
         <Header />
-        <h2>Your NFTs</h2>
+        <h2>Your TAGI NFTs</h2>
         <p></p>
         <section className={styles.info}>
           {isLoading ? (
