@@ -4,11 +4,11 @@ import styles from "../styles/MyNfts.module.css";
 import Header from "../components/Header";
 import { ThirdwebNftMedia, useAddress, useContract, useNFTs, useActiveListings, MediaRenderer} from "@thirdweb-dev/react";
 import { useState } from "react";
-
+import { contractAddress, contractAbi } from "../TagiABI";
 
 
 const MyNfts: NextPage = () => {
-  const { contract } = useContract("0x806c24c1a66c5654e2Ead99a7832FA1Bec781a92",); //Add The Contract you want to look up of Owner
+  const { contract } = useContract(contractAddress); //Add The Contract you want to look up of Owner
   /** @type {import("@thirdweb-dev/react").Contract} */
   const { contract: marketplace} = useContract("0x11D752691a9A1fE2F0B64C6d7b67DC1a1fe90017", "marketplace",); //Marketplace Address
   const address = useAddress();
@@ -24,7 +24,7 @@ const MyNfts: NextPage = () => {
    //number to send to contract to set selling price
   
   console.log(nfts);console.log(listednfts);
-  const  [listingClicked , setListingClicked] = useState(false);  //checking if listing button clicked and setting buttom state
+  const  [listingClicked , setListingClicked] = useState(false);  //checking if listing button clicked and setting button state
   const  [cancelListingClicked , setCancelListingClicked] = useState(false);   //checking if Cancel listing button clicked and setting buttom state
 
 

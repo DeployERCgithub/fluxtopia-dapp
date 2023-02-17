@@ -1,21 +1,29 @@
-import {  Web3Button, } from "@thirdweb-dev/react";
+import {  Web3Button } from "@thirdweb-dev/react";
+
 import type { NextPage } from "next";
 import styles from "../styles/Mint.module.css";
 import Header from "../components/Header";
 import { contractAddress, contractAbi } from "../TagiABI";
 import { useState } from "react";
+import { ethers } from "ethers";
+
 
 const Mint: NextPage = () => {
 
   
+ 
+
+
   const  [mintClicked , setMintClicked] = useState(false);  //checking if listing button clicked and setting buttom state
   const [amount = "", setAmount] = useState<string | undefined>('');
   console.log(amount);
   const parseAmount = parseInt(amount);
   console.log(parseAmount);
-  const cost = .03;  /// your nft sale price
-  let total = (cost) * (parseAmount);
+  const cost = .009;  /// your nft sale price
+  const total = (cost) * (parseAmount);
   console.log(total);
+
+  let newCost = (total+"")
 
   return (
     <main>
@@ -52,11 +60,14 @@ const Mint: NextPage = () => {
                     setMintClicked(true);
                    try {
                     
-                    const tx = await contract.call("mint", (amount));
-                    const receipt = tx.receipt; // the transaction receipt
-                    const id = tx.id;
+                    const tx = await contract.call("mint",amount,{
+                      // override default gas limit
+                      value: ethers.utils.parseEther(newCost), // send ether with the contract call
+                     });
+                    const receipt = tx.receipt;
+                    
                     setMintClicked(false);
-                    alert("Mint was Successful");
+                    alert("Mint was Successful")
                   }
                   catch (error) {
                     console.error(error);

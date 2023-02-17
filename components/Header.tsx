@@ -16,22 +16,13 @@ const Header: React.FC = () => {
                     </a>
             </Link><Link legacyBehavior href={"/mint"}>
             <a className={router.pathname == "/mint" ? styles.active : styles.link}>
-                Mint
+                Mint TAGI
                 </a>
             </Link>
-            <Link legacyBehavior href={"/staking"}>
-            <a className={router.pathname == "/staking" ? styles.active : styles.link}>
-                Staking
-                </a>
-            </Link>
-            <Link legacyBehavior href={"/listednfts"}>
-            <a className={router.pathname == "/listednfts" ? styles.active : styles.link}>
-                Listed NFTs
-                </a>
-            </Link>
-            <Link legacyBehavior href={"/my-nfts"}>
-            <a className={router.pathname == "/my-nfts" ? styles.active : styles.link}>
-                Your Nfts
+            
+            <Link legacyBehavior href={"/your-tagi"}>
+            <a className={router.pathname == "/your-tagi" ? styles.active : styles.link}>
+                Your TAGI
                 </a>
             </Link>
             
