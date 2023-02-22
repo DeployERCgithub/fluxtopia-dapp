@@ -44,7 +44,7 @@ const YourTagi: NextPage = () => {
                   style={{ borderRadius: "10px"}}/>
                   <p>{nft.metadata.name}</p>
                   
-                  <p>{nft.type} Token Id:{nft.metadata.id}</p>
+                  <p></p>
                   <p></p>
                 
                 

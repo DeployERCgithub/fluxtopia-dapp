@@ -1,4 +1,4 @@
-import {  Web3Button } from "@thirdweb-dev/react";
+import {  Web3Button, useContract, useContractRead } from "@thirdweb-dev/react";
 
 import type { NextPage } from "next";
 import styles from "../styles/Mint.module.css";
@@ -13,6 +13,10 @@ const Mint: NextPage = () => {
   
  
 
+  const { contract } = useContract("0x2154A126511A836bBc7760d35b6e11Cb11436fF1"); //TAGI Contract
+  const { data: claimedNFTSupply } = useContractRead(contract, "totalSupply");  //Gets total nfts claimed so far
+  const { data: unclaimedNFTSupply } = useContractRead(contract, "maxSupply");  //Gets total amount of claimable NFTs
+
 
   const  [mintClicked , setMintClicked] = useState(false);  //checking if listing button clicked and setting buttom state
   const [amount = "", setAmount] = useState<string | undefined>('');
@@ -25,6 +29,8 @@ const Mint: NextPage = () => {
 
   let newCost = (total+"")
 
+
+
   return (
     <main>
     <div className={styles.container}>
@@ -33,12 +39,17 @@ const Mint: NextPage = () => {
         <h1>Fluxtopias Minting DAPP</h1>
         <Header />
         <section className={styles.info}>
-        <h2>Welcome to Test Mint DAPP.</h2>
+        <h2>TAGI Mint</h2>
         <p>Make sure to connect your wallet to be able to interact with the DAPP.</p>
-        <p></p>
+        <br></br>
+        <img className={styles.bottomlogo} src="./preview.jpg" alt="homelogo"/>
+        <p> Total Minted             {claimedNFTSupply?.toNumber()} / {" "}
+        {(unclaimedNFTSupply?.toNumber() || 0)} </p>
+        <p>Mint Price: {cost} ETH</p>
+        
         </section>
 
-        <section>Amount to Mint:
+        <section><h1>Amount to Mint:</h1>
         <input className="buybutton"  
         placeholder="0" 
         type='number' name="Amount"
@@ -77,12 +88,12 @@ const Mint: NextPage = () => {
                   }
                   }}
                   >
-                   {mintClicked ? "Minting..." : "Mint a Tagi"} 
+                   {mintClicked ? "Minting..." : "MINT TAGI"} 
                 </Web3Button></div>
                 
               
         </section>
-        
+        <br></br>
         <img className={styles.bottomlogo} src="./HappyTagi.jpg" alt="homelogo"/>
         
         
